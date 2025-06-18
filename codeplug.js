@@ -279,7 +279,7 @@ readButton.addEventListener("click", async () =>
             ack = false;
             await writer.write(blockreq);
             timeout = 0;
-            while(!ack && timeout++<1000)
+            while(!ack && timeout++<100)
             {
                 await sleep(10);
             }
